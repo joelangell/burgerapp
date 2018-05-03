@@ -1,0 +1,53 @@
+<div class="jumbotron jumbotron-fluid" style="background-color:rgb(255,243,133)">
+  <div class="container">
+    <h1 class="display-4"></h1>
+    <p class="lead"></p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card border-dark" style = "background-color: rgb(237,35,48)">
+        <div class="card-body">
+          <h1 class="card-header" style = "background-color: rgb(234,222,40)">Burger of the Day</h1>
+          <h5 class="card-title">Click to devour!</h5>
+          <div class="list-group">
+            {{#each burger_name}} {{#unless devoured}}
+            <button type="button" class="btn btn-outline-danger list-group-item devour-button" data-id="{{id}}" data-eaten="{{devoured}}">{{this.burger_name}}</button>
+              
+            {{/unless}} {{/each}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card border-dark" style = "background-color: rgb(237,35,48)">
+        <div class="card-body">
+          <h1 class="card-header" style = "background-color: rgb(234,222,40)">Add a Burger!</h1>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" id = "burger-input" placeholder="Burger Name" aria-label="New Burger Name" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-warning" type="button" id="submit-button">Add Burger</button>
+            </div>
+          </div>
+        </div>
+        <img class="card-img-bottom" src="../assets/img/bobsburgers.jpg" alt="Bob's Burgers Image">
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card border-dark" style = "background-color: rgb(237,35,48)">
+        <div class="card-body">
+          <h1 class="card-header" style = "background-color: rgb(234,222,40)">Devoured burgers</h1>
+          <ul class="list-group">
+            {{#each burger_name}} {{#if devoured}}
+            <li class="list-group-item">{{this.burger_name}}</li>
+            {{/if}} {{/each}}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

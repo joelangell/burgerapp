@@ -1,0 +1,52 @@
+
+.jumbotron {
+  background-image: url("../img/logo2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: black;
+  height: 205px;
+}
+
+@font-face {
+  font-family: 'bobs';
+  src: url('Bobs_Burgers.ttf')
+}
+
+.card-header {
+  font-family: 'bobs';
+  color: rgb(237,35,48);
+  background-color: rgb(234,222,40);
+}
+
+.list-group-item {
+  padding: .25rem .25rem;
+}
+
+body {
+  /* background-image: url("../img/bg1.jpg"); */
+  background-color: rgb(255,243,133);
+}
+
+/* .devour-button:hover {
+
+} */
+
+/* li {
+  padding: 5px;
+  margin: 5px;
+  background: #faebd7;
+} */
+
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+  background: aqua;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
